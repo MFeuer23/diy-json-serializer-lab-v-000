@@ -8,7 +8,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function() {
   $(".js-more").on("click", function(e) {
-    e.preventDefaults();
+    e.preventDefault();
     var id = $(this).data("id");
     $.get("/products/" + id + "/data", function(description) {
       $.get("/products/" + id + "/inventory", function(inventory) {
